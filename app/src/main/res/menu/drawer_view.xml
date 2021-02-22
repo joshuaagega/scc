@@ -5,9 +5,9 @@
     <item
         android:id="@+id/notifications"
         android:icon="@drawable/notification"
-        android:title=""
-        app:showAsAction="always"
-        android:orderInCategory="0"/>
+        android:title="notifications"
+        app:showAsAction="ifRoom"
+        />
 
 
 
