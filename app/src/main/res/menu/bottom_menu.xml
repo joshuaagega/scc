@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<item
+
+    <item
+        android:id="@+id/calls"
+        android:icon="@drawable/phone"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"
+        android:title="" />
+    <item
+        android:id="@+id/chats"
+        android:icon="@drawable/chat"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="2"
+        android:title="" />
+    <item
     android:id="@+id/about"
     android:icon="@drawable/info"
     app:showAsAction="ifRoom"
-    android:title="About" />
+    android:orderInCategory="3"
+    android:title="" />
 
     <item
         android:id="@+id/profile"
         android:icon="@drawable/profile"
+        android:orderInCategory="4"
         app:showAsAction="ifRoom"
-        android:title="Profile" />
+        android:title="" />
 
 </menu>

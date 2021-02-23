@@ -8,26 +8,29 @@
     android:layout_height="match_parent">
 
 
-    <com.google.android.material.navigation.NavigationView
 
-        android:id="@+id/nav_view"
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header"
-        android:elevation="10dp"
-        app:menu="@menu/drawer_view"
-        tools:targetApi="lollipop" />
-
-
-<com.google.android.material.bottomnavigation.BottomNavigationView
+<com.google.android.material.bottomappbar.BottomAppBar
     android:id="@+id/bottomAppBar"
     android:layout_gravity="bottom"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
     android:backgroundTint="@color/white"
-    app:menu="@menu/bottom_menu"
+    app:hideOnScroll="true"
+    app:fabAnimationMode="scale"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_menu" />
+
+
+</com.google.android.material.bottomappbar.BottomAppBar>
+
+
 <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
