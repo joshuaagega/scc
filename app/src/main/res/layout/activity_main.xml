@@ -7,7 +7,11 @@
     android:id="@+id/drawerLayout"
     android:layout_height="match_parent">
 
-
+    <fragment
+        android:id="@+id/IndustryFragment"
+        android:name="com.sauti.fragments.IndustryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 <com.google.android.material.bottomappbar.BottomAppBar
     android:id="@+id/bottomAppBar"
@@ -39,4 +43,6 @@
     app:layout_anchor="@id/bottomAppBar"
     app:maxImageSize="35dp"
     app:tint = "@color/white"/>
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

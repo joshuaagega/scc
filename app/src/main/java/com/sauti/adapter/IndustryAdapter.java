@@ -38,12 +38,12 @@ public class IndustryAdapter extends RecyclerView.Adapter<IndustryAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.bindList(industryArrayList.get(position));
-        holder.popular.setOnClickListener(new View.OnClickListener() {
+        holder.Industry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Model tags = industryArrayList.get(position);
+                Model Specific_Industry = industryArrayList.get(position);
                 Intent intent = new Intent(context.getApplicationContext(), Offers.class);
-                intent.putExtra("hashtags",tags);
+                intent.putExtra("Industry",Specific_Industry);
                 context.startActivity(intent);
             }
         });
@@ -55,16 +55,16 @@ public class IndustryAdapter extends RecyclerView.Adapter<IndustryAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ConstraintLayout popular;
-        TextView popularTag;
+        ConstraintLayout Industry;
+        TextView IndustryName;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            popularTag = itemView.findViewById(R.id.popularTag);
-            popular = itemView.findViewById(R.id.popular);
+            IndustryName = itemView.findViewById(R.id.industryName);
+            Industry = itemView.findViewById(R.id.Industry);
         }
 
         public void bindList(Model popular) {
-            popularTag.setText(popular.getTitle());
+            IndustryName.setText(popular.getTitle());
         }
     }
 }

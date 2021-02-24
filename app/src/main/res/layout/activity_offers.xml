@@ -10,63 +10,51 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:id="@+id/banner_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="16dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </RelativeLayout>
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:background="@drawable/offersbackground"
             android:elevation="10dp"
             android:minHeight="300dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/hashtags"
+                android:id="@+id/IndustryDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
-                android:text="#Gain #Gain #Gain "
-                android:textSize="13sp"
-                app:layout_constraintTop_toBottomOf="@+id/copy"
+                android:text="Industry "
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="16dp" />
+            <TextView
+                android:id="@+id/IndustryCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Cost - $ 230 "
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/IndustryDesc"
                 tools:layout_editor_absoluteX="16dp" />
 
-            <ImageView
-                android:id="@+id/copy"
-                android:layout_width="71dp"
-                android:layout_height="61dp"
-                android:layout_marginTop="8dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/white"
+                android:marginTop="20dp"
+                android:minHeight="50dp"
+                android:id="@+id/begin"
+                android:text="Begin"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="?attr/actionModeCopyDrawable" />
+                app:layout_constraintTop_toBottomOf="@id/IndustryCost" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

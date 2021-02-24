@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1088775116833",
+    "project_id": "sauti-application",
+    "storage_bucket": "sauti-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088775116833:android:07e0ab3350f93eeaf2ab60",
+        "android_client_info": {
+          "package_name": "com.sauti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088775116833-5csaqobhbpt47gdg9uoe4am7hjm873bf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sauti",
+            "certificate_hash": "0dd1cc3020bd7075249279a307d019fa3de8f10f"
+          }
+        },
+        {
+          "client_id": "1088775116833-1i7e0tgm4pmo8spua3htnc2588ui9fie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaOHzBtCUvx52p3IG0FyuvqNAU_oqrvxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088775116833-1i7e0tgm4pmo8spua3htnc2588ui9fie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

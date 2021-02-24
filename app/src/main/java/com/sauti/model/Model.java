@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Model implements Parcelable {
-    String Title, code, tags;
+    String Title, desc, cost, tags;
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
 
         @Override
@@ -21,18 +21,23 @@ public class Model implements Parcelable {
     public Model() {
     }
 
-    public Model(String title, String code, String tags) {
+    public Model(String title, String code, String tags,String desc) {
         this.Title = title;
-        this.code = code;
+        this.cost = code;
         this.tags = tags;
+        this.desc = desc;
+    }
+
+    public String getDesc() {
+        return desc;
     }
 
     public String getTitle() {
         return Title;
     }
 
-    public String getCode() {
-        return code;
+    public String getCost() {
+        return cost;
     }
 
     public String getTags() {
@@ -41,8 +46,9 @@ public class Model implements Parcelable {
 
     public Model(Parcel in) {
         this.Title = in.readString();
-        this.code = in.readString();
+        this.cost = in.readString();
         this.tags = in.readString();
+        this.desc = in.readString();
     }
 
     @Override
@@ -54,7 +60,8 @@ public class Model implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
 
         dest.writeString(this.Title);
-        dest.writeString(this.code);
+        dest.writeString(this.cost);
         dest.writeString(this.tags);
+        dest.writeString(this.desc);
     }
 }

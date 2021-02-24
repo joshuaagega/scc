@@ -9,44 +9,42 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 import com.sauti.model.Model;
 
 public class Offers extends AppCompatActivity implements View.OnClickListener {
 
-    Model tags;
-    TextView hashtags;
-    ImageView copy;
+    Model Industry;
+    TextView IndustryDesc,IndustryCost;
+    MaterialButton begin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offers);
 
-        copy = findViewById(R.id.copy);
-        hashtags = findViewById(R.id.hashtags);
+        IndustryCost = findViewById(R.id.IndustryCost);
+        IndustryDesc = findViewById(R.id.IndustryDesc);
+        begin = findViewById(R.id.begin);
 
-        copy.setOnClickListener(this);
+        begin.setOnClickListener(this);
 
         Bundle data = getIntent().getExtras();
 
         if (data != null) {
-            tags = data.getParcelable("hashtags");
+            Industry = data.getParcelable("hashtags");
         }
-        if (tags != null) {
-            hashtags.setText(tags.getTags());
+        if (Industry != null) {
+            IndustryDesc.setText(Industry.getDesc());
+            IndustryCost.setText("Cost - "+Industry.getCost());
         }
     }
     @Override
     public void onClick(View v) {
-        if(v == copy){
-            ClipboardManager clipBoard = (ClipboardManager) getSystemService(this.CLIPBOARD_SERVICE);
-            ClipData hashtags = ClipData.newPlainText("Hashtags4Gain",tags.getTags());
-            clipBoard.setPrimaryClip(hashtags);
-
-            Snackbar.make(v,"HashTags Copied to ClipBoard \nTime for Gains", BaseTransientBottomBar.LENGTH_LONG).show();
-
+        if(v == begin){
+            // perform operations
         }
     }
 }
