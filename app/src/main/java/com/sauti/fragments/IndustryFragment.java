@@ -44,8 +44,9 @@ public class IndustryFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView = view.findViewById(R.id.RecyclerView);
-
+        database = FirebaseDatabase.getInstance();
         getIndustries();
+
     }
 
     private void getIndustries() {

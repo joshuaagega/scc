@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1088775116833:android:07e0ab3350f93eeaf2ab60",
         "android_client_info": {
-          "package_name": "com.sauti"
+          "package_name": "com.sauti.scc"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "1088775116833-5csaqobhbpt47gdg9uoe4am7hjm873bf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.sauti",
+            "package_name": "com.sauti.scc",
             "certificate_hash": "0dd1cc3020bd7075249279a307d019fa3de8f10f"
           }
         },
