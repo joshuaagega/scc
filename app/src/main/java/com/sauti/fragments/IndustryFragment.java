@@ -46,7 +46,6 @@ public class IndustryFragment extends Fragment {
         RecyclerView = view.findViewById(R.id.RecyclerView);
         database = FirebaseDatabase.getInstance();
         getIndustries();
-
     }
 
     private void getIndustries() {
