@@ -7,4 +7,10 @@
         android:orderInCategory="100"
         android:title=""
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/admin"
+        android:icon="@drawable/ic_baseline_admin_panel_settings_24"
+        android:orderInCategory="0"
+        android:title=""
+        app:showAsAction="ifRoom" />
 </menu>
