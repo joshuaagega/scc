@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class IndustryAdapter extends RecyclerView.Adapter<IndustryAdapter.ViewHolder> {
     public Context context;
-    public ArrayList<Model> industryArrayList;
+    public ArrayList<Model> industryArrayList = new ArrayList();
     Activity activity;
 
     public IndustryAdapter(Context context,ArrayList<Model> list,Activity activity){
