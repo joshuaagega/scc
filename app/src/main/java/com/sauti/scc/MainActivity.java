@@ -32,6 +32,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class    MainActivity extends AppCompatActivity {
 private BottomNavigationView bottomview;
+private Menu top;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,18 +76,39 @@ private BottomNavigationView bottomview;
                          startActivity(rateIntent);
                          return true;
 
+
                  }
 
                  return true;
              }
          });
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_cart:
+                Toast.makeText(this, "No new notifications", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.admin:
+                Intent intent = new Intent(getApplicationContext(), Admin.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.top_menu, menu);
+
         return true;
     }
+
+
 
 
     @Override
